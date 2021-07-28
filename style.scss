@@ -224,21 +224,32 @@ $breakpoints: (
     .servie_wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
+        gap: 1rem;
         .service {
-            display: flex;
-            flex-direction: column;
             border: 1px solid goldenrod;
             border-radius: 0.3125rem;
             padding: 1rem;
+            
+            a{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
 
             .service_title {
                 font-size: 1.25rem;
                 font-weight: 500;
-                margin-bottom: 0.5rem;
+            }
+            img{
+                width: 100%;
+                height: 100%;
             }
             .details {
                 line-height: 1.5;
+            }
+            &:hover{
+                box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
             }
         }
         @include mediaQ(tablet) {
@@ -336,4 +347,11 @@ footer {
             }
         }
     }
+}
+
+.contact_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
 }
